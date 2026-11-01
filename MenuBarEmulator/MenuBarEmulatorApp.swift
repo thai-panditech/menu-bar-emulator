@@ -22,7 +22,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let window = FloatingWindow(model: model)
         window.install()
         self.window = window
-        model.updates.start()
+        // Personal build: no update check, so the app never offers to replace itself with the upstream release.
     }
 
     func applicationWillTerminate(_ notification: Notification) {
